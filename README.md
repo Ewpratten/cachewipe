@@ -15,3 +15,32 @@ This crate can be installed via `cargo` with:
 ```sh
 cargo install cachewipe
 ```
+
+## Usage
+
+```
+cachewipe 0.1.0
+Evan Pratten <ewpratten@gmail.com>
+Glob file delete that respects gitignore
+
+USAGE:
+    cachewipe [FLAGS] [OPTIONS] <pattern>
+
+FLAGS:
+        --dry-run    Just print file paths to stdout. Don't delete anything
+    -h, --help       Prints help information
+    -V, --version    Prints version information
+
+OPTIONS:
+    -i, --ignore-root-dir <root_ignores>...    Add a root-level directory to the list of dirs to ignore
+
+ARGS:
+    <pattern>    File or path REGEX pattern to delete
+
+```
+
+Example:
+
+```sh
+cachewipe ".*.pyc$"
+```
