@@ -1,4 +1,4 @@
-use std::{env::current_dir, fs, path::{Path, PathBuf}};
+use std::{fs, path::{Path}};
 
 use clap::{crate_authors, crate_description, crate_name, crate_version, App, Arg};
 use failure::Error;
@@ -8,7 +8,7 @@ use walkdir::WalkDir;
 
 fn should_delete(
     path: &Path,
-    gitignore: &File,
+    _gitignore: &File,
     re: &Regex,
     ignored_roots: &Vec<&str>,
 ) -> Result<bool, Error> {
@@ -95,8 +95,8 @@ fn main() {
                     if !dry_run {
                         fs::remove_file(path.path()).unwrap();
                     }             
+                }
             }
-        }
             Err(_) => todo!(),
         }
     }

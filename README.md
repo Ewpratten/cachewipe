@@ -6,7 +6,7 @@
 [![Audit](https://github.com/Ewpratten/cachewipe/actions/workflows/audit.yml/badge.svg)](https://github.com/Ewpratten/cachewipe/actions/workflows/audit.yml)
 
 
-repo description
+`cachewipe` is a command line utility I originally built to wipe all PYC files from a Python monorepo, while respecting the gitignore (not deleting files that we want to keep). As of now, this tool is fully functional, but does **not** pay attention to gitignore due to some issues im having with the library.
 
 ## Installation
 
